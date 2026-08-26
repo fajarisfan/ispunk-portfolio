@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Anton&display=swap');
 
 :root {
   --bg: #0a0a0a;
@@ -9,6 +9,7 @@
   --accent3: #00ff88;
   --border: #2a2a2a;
   --font: 'Space Mono', monospace;
+  --font-head: 'Anton', 'Arial Black', sans-serif;
   --content: 720px;
   --nav-bg: rgba(10,10,10,.97);
   --modal-bg: rgba(0,0,0,.9);
@@ -143,7 +144,9 @@ a:hover { color: var(--accent2); }
 @keyframes blink { 0%,40% { opacity: 1; } 50%,100% { opacity: 0; } }
 
 .hero-title {
-  font-size: clamp(26px, 4.5vw, 42px); font-weight: 700;
+  font-family: var(--font-head); font-weight: 400;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  font-size: clamp(26px, 4.5vw, 42px);
   line-height: 1.15; margin-bottom: 20px;
   position: relative;
   animation: glitch-skew 6s infinite steps(1);
@@ -182,7 +185,9 @@ a:hover { color: var(--accent2); }
 /* ===== SECTIONS ===== */
 .section { padding: 80px 24px; max-width: var(--content); margin: 0 auto; }
 .section-title {
-  font-size: clamp(22px, 3.5vw, 36px); font-weight: 700; margin-bottom: 12px;
+  font-family: var(--font-head); font-weight: 400;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  font-size: clamp(22px, 3.5vw, 36px); margin-bottom: 12px;
 }
 .section-title em { color: var(--accent); font-style: normal; }
 
