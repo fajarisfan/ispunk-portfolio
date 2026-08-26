@@ -202,11 +202,21 @@ a:hover { color: var(--accent2); }
 .about-grid { display: flex; gap: 48px; align-items: flex-start; margin-top: 32px; }
 .about-photo-wrap {
   position: relative; flex: 0 0 auto; transform: rotate(-2deg);
+  padding: 8px;
+  background: var(--bg2);
+  border: 1px solid var(--accent);
+  clip-path: polygon(2% 0%, 98% 3%, 100% 96%, 96% 100%, 4% 98%, 0% 95%, 1% 30%);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.45);
+}
+.about-photo-wrap::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(circle, transparent 55%, rgba(255,255,255,0.45) 56%, transparent 58%);
+  background-size: 4px 4px;
+  mix-blend-mode: screen;
 }
 .about-photo {
-  display: block; width: 200px; max-width: 60vw;
-  border: 3px solid var(--accent); filter: contrast(1.1) saturate(0.85);
-  box-shadow: 6px 6px 0 rgba(0,0,0,0.45);
+  display: block; width: 190px; max-width: 60vw;
+  filter: grayscale(1) contrast(1.35) brightness(1.05);
 }
 .about-photo-tape {
   position: absolute; top: -12px; left: 50%; width: 80px; height: 24px;
@@ -269,9 +279,14 @@ a:hover { color: var(--accent2); }
 }
 .pcard {
   background: var(--bg2);
-  padding: 20px; position: relative; transition: background .15s;
+  padding: 20px; position: relative;
+  transition: background .15s, transform .15s, box-shadow .15s;
 }
-.pcard:hover { background: #161616; }
+.pcard:hover {
+  background: #161616;
+  transform: rotate(-1.2deg) translateY(-3px);
+  box-shadow: -4px -4px 0 var(--accent), 4px 4px 0 var(--accent3);
+}
 .pcard-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
 .pcard-icon { color: var(--accent); font-weight: 700; font-size: 14px; }
 .pcard-name { font-weight: 700; font-size: 14px; color: var(--fg); text-transform: uppercase; letter-spacing: 0.5px; }
