@@ -200,6 +200,19 @@ a:hover { color: var(--accent2); }
 
 /* ===== ABOUT ===== */
 .about-grid { display: flex; gap: 48px; align-items: flex-start; margin-top: 32px; }
+.about-photo-wrap {
+  position: relative; flex: 0 0 auto; transform: rotate(-2deg);
+}
+.about-photo {
+  display: block; width: 200px; max-width: 60vw;
+  border: 3px solid var(--accent); filter: contrast(1.1) saturate(0.85);
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.45);
+}
+.about-photo-tape {
+  position: absolute; top: -12px; left: 50%; width: 80px; height: 24px;
+  transform: translateX(-50%) rotate(3deg);
+  background: rgba(255,255,240,0.25); border: 1px dashed rgba(255,255,255,0.4);
+}
 .about-text { flex: 1; }
 .about-text p { color: #999; margin-bottom: 16px; font-size: 13px; line-height: 1.9; }
 .about-text strong { color: var(--fg); }
