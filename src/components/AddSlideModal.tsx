@@ -55,6 +55,12 @@ export function AddSlideModal() {
           {url ? (type === "video" ? "Video selected" : "Image selected") : T.m_upload_img[lang]}
         </div>
         <input ref={fileRef} type="file" accept="image/*,video/*" hidden onChange={(e) => handleFile(e.target.files?.[0])} />
+        <input
+          className="punk-input"
+          placeholder="or paste image URL (e.g. https://...jpg)"
+          value={url.startsWith("data:") ? "" : url}
+          onChange={(e) => setUrl(e.target.value)}
+        />
         <div className="modal-btns">
           <button className="punk-btn-sm cancel-btn" onClick={() => setOpen(false)}>{T.m_cancel[lang]}</button>
           <button className="punk-btn-sm save-btn" onClick={handleAdd}>{T.m_add[lang]}</button>
