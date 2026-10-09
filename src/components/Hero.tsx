@@ -21,9 +21,18 @@ export function Hero() {
             className="hero-sub"
             dangerouslySetInnerHTML={{ __html: T.hero_sub[lang] }}
           />
-          <a href="#projects" className="punk-btn hero-btn">
-            {T.hero_cta[lang]}
-          </a>
+          <div className="hero-actions">
+            <a href="#projects" className="punk-btn hero-btn">
+              {T.hero_cta[lang]}
+            </a>
+            <a
+              href="/Isfan-Fajar-Anugrah-CV.pdf"
+              download="Isfan-Fajar-Anugrah-CV.pdf"
+              className="punk-btn punk-btn--ghost hero-btn"
+            >
+              {T.hero_cv[lang]}
+            </a>
+          </div>
         </div>
         <div className="hero-ascii">
           <pre>{`

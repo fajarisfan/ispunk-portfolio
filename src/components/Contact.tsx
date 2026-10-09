@@ -32,6 +32,13 @@ export function Contact() {
         <a href="https://www.linkedin.com/in/isfan-fajar-anugrah-1b4191280/" target="_blank" rel="noopener" className="punk-btn">
           Linkedin
         </a>  
+        <a
+          href="/Isfan-Fajar-Anugrah-CV.pdf"
+          download="Isfan-Fajar-Anugrah-CV.pdf"
+          className="punk-btn punk-btn--ghost"
+        >
+          {T.hero_cv[lang]}
+        </a>
       </div>
       <div className="contact-ascii">
         <pre>{`

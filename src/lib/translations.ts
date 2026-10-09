@@ -15,6 +15,7 @@ export const T: Translations = {
     id: 'Isfan Fajar Anugrah. Developer Python. Healthcare IT, otomasi, data tools. <strong>No buzzwords, just code.</strong>',
   },
   hero_cta: { en: "See work", id: "Lihat kerjaan" },
+  hero_cv: { en: "Download CV", id: "Unduh CV" },
   about_tag: { en: "About", id: "Tentang" },
   about_title: {
     en: "What I <em>do</em>",
