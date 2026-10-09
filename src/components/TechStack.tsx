@@ -6,7 +6,7 @@ import { T } from "@/lib/translations";
 const TECHS = [
   { name: "Python", desc: "main lang", slug: "python" },
   { name: "Flutter", desc: "mobile", slug: "flutter" },
-  { name: "PowerShell", desc: "automation", slug: "powershell" },
+  { name: "PowerShell", desc: "automation", slug: "gnubash" },
   { name: "Streamlit", desc: "data apps", slug: "streamlit" },
   { name: "PostgreSQL", desc: "database", slug: "postgresql" },
   { name: "REST API", desc: "integrations", slug: "json" },
