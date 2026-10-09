@@ -1,7 +1,6 @@
 "use client";
 
 import { PortfolioProvider } from "@/context/PortfolioContext";
-import { useCursor } from "@/hooks/useCursor";
 import { useReveal } from "@/hooks/useReveal";
 import { Banner } from "@/components/Banner";
 import { Navbar } from "@/components/Navbar";
@@ -21,16 +20,6 @@ import { EditProjectModal } from "@/components/EditProjectModal";
 import { AddSlideModal } from "@/components/AddSlideModal";
 import { EditSlideModal } from "@/components/EditSlideModal";
 
-function CursorLayer() {
-  const { curRef, trailRef } = useCursor();
-  return (
-    <>
-      <div ref={curRef} className="punk-cursor" />
-      <div ref={trailRef} className="punk-trail" />
-    </>
-  );
-}
-
 function RevealWrapper({ children }: { children: React.ReactNode }) {
   const ref = useReveal();
   return <div ref={ref}>{children}</div>;
@@ -39,7 +28,6 @@ function RevealWrapper({ children }: { children: React.ReactNode }) {
 export default function Home() {
   return (
     <PortfolioProvider>
-      <CursorLayer />
       <Banner />
       <Navbar />
       <RevealWrapper>

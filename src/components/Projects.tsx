@@ -8,17 +8,18 @@ export function Projects() {
 
   return (
     <section id="projects" className="section projects-section">
-      <div className="punk-tag-wrap">
-        <span className="punk-tag">{T.proj_tag[lang]}</span>
-      </div>
-      <h2
-        className="section-title"
-        dangerouslySetInnerHTML={{ __html: T.proj_title[lang] }}
-      />
-      <p className="section-subtitle">
-        {lang === "id" ? "YANG UDEH JADI" : "WHAT I BUILT"}
-      </p>
-      <div className="projects-grid">
+      <div className="section-inner">
+        <div className="punk-tag-wrap">
+          <span className="punk-tag">{T.proj_tag[lang]}</span>
+        </div>
+        <h2
+          className="section-title"
+          dangerouslySetInnerHTML={{ __html: T.proj_title[lang] }}
+        />
+        <p className="section-subtitle">
+          {lang === "id" ? "YANG UDEH JADI" : "WHAT I BUILT"}
+        </p>
+        <div className="projects-grid">
         {projects.map((proj, i) => (
           <div key={i} className="pcard">
             {editing && (
@@ -68,6 +69,7 @@ export function Projects() {
             </div>
           </div>
         ))}
+        </div>
       </div>
     </section>
   );

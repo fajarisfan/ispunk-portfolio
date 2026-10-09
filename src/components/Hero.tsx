@@ -34,18 +34,23 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-ascii">
-          <pre>{`
- ___ ___ ___ _   _ _  _ _  __
-|_ _/ __| _ \\ | | | \\| | |/ /
- | |\\__ \\  __/ |_| | .\` | ' < 
-|___|___/_|   \\___/|_|\\_|_|\\_\\
-
+        <div className="hero-visual">
+          <div className="hero-photo-wrap">
+            <img
+              src="/screenshot-fpk.PNG"
+              alt="FPK Converter – BPJS claims PDF to CSV tool"
+              className="hero-photo"
+            />
+            <span className="hero-photo-tape" />
+          </div>
+          <div className="hero-ascii" aria-hidden="true">
+            <pre>{`
   >_ python
   >_ flutter
   >_ automation
   >_ healthcare it
-  `}</pre>
+   `}</pre>
+          </div>
         </div>
       </div>
     </section>

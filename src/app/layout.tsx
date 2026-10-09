@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Anton, Space_Mono } from "next/font/google";
 import "./globals.css";
+
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-anton",
+});
+
+const spaceMono = Space_Mono({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space",
+});
 
 export const metadata: Metadata = {
   title: "Isfan Fajar Anugrah // Web Portfolio",
@@ -26,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${anton.variable} ${spaceMono.variable}`}>
       <body className="zine-grain">{children}</body>
     </html>
   );

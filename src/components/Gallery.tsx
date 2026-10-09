@@ -33,16 +33,15 @@ export function Gallery() {
   if (!mounted || slides.length === 0) {
     return (
       <section id="gallery" className="section gallery-section">
-        <div className="punk-tag-wrap">
-          <span className="punk-tag">{T.gal_tag[lang]}</span>
-        </div>
-        <h2
-          className="section-title"
-          dangerouslySetInnerHTML={{ __html: T.gal_title[lang] }}
-        />
-        <div className="gallery-empty">
-          <pre>{`// NO MEDIA YET
+        <div className="section-inner">
+          <h2
+            className="section-title"
+            dangerouslySetInnerHTML={{ __html: T.gal_title[lang] }}
+          />
+          <div className="gallery-empty">
+            <pre>{`// NO MEDIA YET
 // add slides in edit mode`}</pre>
+          </div>
         </div>
       </section>
     );
@@ -52,14 +51,12 @@ export function Gallery() {
 
   return (
     <section id="gallery" className="section gallery-section">
-      <div className="punk-tag-wrap">
-        <span className="punk-tag">{T.gal_tag[lang]}</span>
-      </div>
-      <h2
-        className="section-title"
-        dangerouslySetInnerHTML={{ __html: T.gal_title[lang] }}
-      />
-      <div className="gallery-wrap">
+      <div className="section-inner">
+        <h2
+          className="section-title"
+          dangerouslySetInnerHTML={{ __html: T.gal_title[lang] }}
+        />
+        <div className="gallery-wrap">
         {editing && (
           <div className="gal-edit-bar">
             <button
@@ -125,6 +122,7 @@ export function Gallery() {
               onClick={() => goTo(i)}
             />
           ))}
+        </div>
         </div>
       </div>
     </section>

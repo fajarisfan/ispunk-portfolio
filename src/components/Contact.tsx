@@ -8,15 +8,13 @@ export function Contact() {
 
   return (
     <section id="contact" className="section contact-section">
-      <div className="punk-tag-wrap">
-        <span className="punk-tag">{T.c_tag[lang]}</span>
-      </div>
-      <h2
-        className="section-title"
-        dangerouslySetInnerHTML={{ __html: T.c_title[lang] }}
-      />
-      <p className="contact-sub">{T.c_sub[lang]}</p>
-      <div className="contact-links">
+      <div className="section-inner">
+        <h2
+          className="section-title"
+          dangerouslySetInnerHTML={{ __html: T.c_title[lang] }}
+        />
+        <p className="contact-sub">{T.c_sub[lang]}</p>
+        <div className="contact-links">
         <a
           href="#"
           onClick={(e) => e.preventDefault()}
@@ -45,6 +43,7 @@ export function Contact() {
   >_ isfanfajara@gmail.com
   >_ linkedin/isfan-fajar-anugrah
         `}</pre>
+      </div>
       </div>
     </section>
   );
