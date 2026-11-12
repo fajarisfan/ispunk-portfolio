@@ -1,14 +1,11 @@
 "use client";
 
-import { usePortfolio } from "@/context/PortfolioContext";
-
 export function Banner() {
-  const { lang } = usePortfolio();
-  const text = "DO IT YOURSELF // PUNK IS ATTITUDE // 1.3.1.2 // A.C.A.B // DIY OR DIE // "
+  const text = "DO IT YOURSELF // PUNK IS ATTITUDE // DIY OR DIE // CODE IT YOURSELF // "
   const repeated = text.repeat(6);
 
   return (
-    <div className="punk-banner">
+    <div className="punk-banner" aria-hidden="true">
       <span className="marquee">{repeated}</span>
     </div>
   );

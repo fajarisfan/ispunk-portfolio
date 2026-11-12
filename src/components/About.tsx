@@ -1,8 +1,9 @@
 "use client";
 
+import Image from "next/image";
+import profilePhoto from "../../public/profile.webp";
 import { usePortfolio } from "@/context/PortfolioContext";
 import { T } from "@/lib/translations";
-import { PROFILE_PHOTO_URL } from "@/lib/site";
 
 export function About() {
   const { lang } = usePortfolio();
@@ -18,12 +19,16 @@ export function About() {
           {lang === "id" ? "SIAPA GUE" : "WHO AM I"}
         </p>
         <div className="about-grid">
-          {PROFILE_PHOTO_URL && (
-            <div className="about-photo-wrap">
-              <img src={PROFILE_PHOTO_URL} alt="Isfan Fajar Anugrah" className="about-photo" />
-              <span className="about-photo-tape" />
-            </div>
-          )}
+          <div className="about-photo-wrap">
+            <Image
+              src={profilePhoto}
+              alt="Isfan Fajar Anugrah"
+              className="about-photo"
+              sizes="210px"
+              priority
+            />
+            <span className="about-photo-tape" />
+          </div>
           <div className="about-text">
             <p dangerouslySetInnerHTML={{ __html: T.about_p1[lang] }} />
             <p dangerouslySetInnerHTML={{ __html: T.about_p2[lang] }} />

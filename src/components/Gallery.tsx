@@ -119,6 +119,8 @@ export function Gallery() {
             <button
               key={i}
               className={`gal-dot ${i === current ? "active" : ""}`}
+              aria-label={`Slide ${i + 1} of ${slides.length}`}
+              aria-current={i === current}
               onClick={() => goTo(i)}
             />
           ))}

@@ -19,6 +19,7 @@ import { AddProjectModal } from "@/components/AddProjectModal";
 import { EditProjectModal } from "@/components/EditProjectModal";
 import { AddSlideModal } from "@/components/AddSlideModal";
 import { EditSlideModal } from "@/components/EditSlideModal";
+import { EDIT_ENABLED } from "@/lib/site";
 
 function RevealWrapper({ children }: { children: React.ReactNode }) {
   const ref = useReveal();
@@ -40,13 +41,17 @@ export default function Home() {
       </RevealWrapper>
       <Footer />
       <LanguageToggle />
-      <EditToggle />
+      {EDIT_ENABLED && (
+        <>
+          <EditToggle />
+          <EditBar />
+          <AddProjectModal />
+          <EditProjectModal />
+          <AddSlideModal />
+          <EditSlideModal />
+        </>
+      )}
       <DarkModeToggle />
-      <EditBar />
-      <AddProjectModal />
-      <EditProjectModal />
-      <AddSlideModal />
-      <EditSlideModal />
     </PortfolioProvider>
   );
 }

@@ -2,6 +2,7 @@
 
 import { usePortfolio } from "@/context/PortfolioContext";
 import { T } from "@/lib/translations";
+import { GITHUB_URL } from "@/lib/site";
 
 export function Contact() {
   const { lang } = usePortfolio();
@@ -16,11 +17,10 @@ export function Contact() {
         <p className="contact-sub">{T.c_sub[lang]}</p>
         <div className="contact-links">
         <a
-          href="#"
-          onClick={(e) => e.preventDefault()}
-          className="punk-btn punk-btn--disabled"
-          aria-disabled="true"
-          title="GitHub — contact me directly"
+          href={GITHUB_URL}
+          target="_blank"
+          rel="noopener"
+          className="punk-btn"
         >
           GitHub
         </a>

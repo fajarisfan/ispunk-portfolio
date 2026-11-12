@@ -4,6 +4,7 @@ import { createContext, useContext, useCallback, useState, useEffect, type React
 import type { Project, Slide, Lang } from "@/lib/types";
 import { defaultProjects } from "@/lib/defaultProjects";
 import { defaultSlides } from "@/lib/defaultSlides";
+import { EDIT_ENABLED } from "@/lib/site";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 
 interface PortfolioCtx {
@@ -68,7 +69,16 @@ export function PortfolioProvider({ children }: { children: ReactNode }) {
     }
   }, [setLangState]);
 
-  const toggleEdit = useCallback(() => setEditing((e) => !e), []);
+  // Sync <html lang> with the active language
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
+
+  const toggleEdit = useCallback(() => {
+    if (EDIT_ENABLED) setEditing((e) => !e);
+  }, []);
 
   const addProject = useCallback(
     (p: Project) => {
